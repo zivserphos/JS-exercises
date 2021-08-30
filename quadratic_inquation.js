@@ -12,4 +12,4 @@ function  quadraticEquation(num1,num2,num3)
     return [firstResult,secondResult];
 }
 
-console.log((quadraticEquation(7,30,5)));
+console.log((quadraticEquation(7,6,5)));
