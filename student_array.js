@@ -13,6 +13,7 @@ function studentsStatistics (arr)
             lowestGrade=arr[i];
         }
     }
+    arr
     return heighstGrade-lowestGrade;
 }
 
@@ -63,11 +64,10 @@ function halfRange (arr)
         newArr
         
     }
-    newArr
-    studentsStatistics(newArr);
+    return studentsStatistics(newArr);
 }
 
 var arr7 = [75,83,60,92,70,80]
-console.log(studentsStatistics(92,70,80));
+console.log(studentsStatistics([75,80,90]));
 findMedian(arr7);
-halfRange([75,83,60,92,70,80]);
+console.log(halfRange([75,83,60,92,70,80]));
