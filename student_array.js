@@ -13,9 +13,12 @@ function studentsStatistics (arr)
             lowestGrade=arr[i];
         }
     }
+    return heighstGrade-lowestGrade;
+}
 
-    let range = heighstGrade-lowestGrade;
-    heighstGrade =0;
+function findMedian(arr)
+{
+    var heighstGrade =0;
     var sortedArr = [];
     let index =0;
     var arrLength = arr.length
@@ -44,10 +47,27 @@ function studentsStatistics (arr)
         {
             median = sortedArr[(sortedArr.length-1)/2];
         }
-
-    console.log(range,median,)
+    
+    console.log(median);
     
 }
 
+function halfRange (arr)
+{
+    var newArr = [];
+    var num = Math.round((arr.length)/2)
+    
+    for (let i=num; i<arr.length; i++)
+    {
+        newArr.push(arr[i]);
+        newArr
+        
+    }
+    newArr
+    studentsStatistics(newArr);
+}
 
-studentsStatistics([75,83,60,92,70,80]);
+var arr7 = [75,83,60,92,70,80]
+console.log(studentsStatistics(92,70,80));
+findMedian(arr7);
+halfRange([75,83,60,92,70,80]);
