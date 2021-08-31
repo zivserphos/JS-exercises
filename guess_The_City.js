@@ -1,23 +1,22 @@
 function guessCity(capital, coastal, famous, ancient)
 {
-    if (capital && famous && ancient && coastal === false)
+    if (capital && famous && ancient && !coastal)
         return "Jerusalem";
-    if (famous && coastal && ancient === false && capital === false)
+    if (famous && coastal && !ancient && !capital)
         return "Tel-Aviv";
-    if (ancient && capital === false && coastal === false && famous === false)
+    if (ancient && !capital && !coastal && !famous)
         {
             return "Katzerin"
         }
-    if (ancient && coastal && capital === false && famous === false)
+    if (ancient && coastal && !capital && !famous)
         {
             return "Acre"
         }
-    if (coastal && ancient && capital && famous)
-        return "Zikim"
-    if (!coastal && !ancient && !capital && !famous)
-            return "MusMus"
-
-        return("You won the system");
+    if (coastal && !ancient && !capital && !famous)
+    {
+        return "Zikim";
+    }
+        return "Musmus";
 }
 
-console.log(guessCity(false, true, false, true));
+console.log(guessCity(true, false, true, true));
